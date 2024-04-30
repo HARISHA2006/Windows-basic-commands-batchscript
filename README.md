@@ -74,16 +74,28 @@ mv Myfile.txt %userprofile%\Documents
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
+```
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+echo Backup completed successfully!
+```
+Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup.
 
-
-
-
+```
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+del %userprofile%\Documents\*.docx
+echo Backup and deletion completed successfully!
+```
 
 
 
 ## OUTPUT
 
 
+![326683409-f8257a6d-6fa4-4e1a-bc73-063fad3c5508](https://github.com/HARISHA2006/Windows-basic-commands-batchscript/assets/148843830/845add23-bd9b-4ece-978b-9b3059dade18)
 
 
 
